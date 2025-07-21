@@ -79,6 +79,24 @@ class TaskTest {
         Assertions.assertFalse(actual);
     }
 
+    @Test
+
+    public void testTaskNotMatches() {
+        String[] subtasks = {"Молоко", "Яйца", "Батон"};
+        Task task = new Task (123);
+        boolean actual = task.matches( "Сыр");
+        Assertions.assertFalse(actual);
+    }
+
+    @Test
+
+    public void testTaskMatches() {
+        String[] subtasks = {};
+        Task task = new Task (123);
+        boolean actual = task.matches("Зайти в магазин");
+        Assertions.assertFalse(actual);
+    }
+
 
 }
 
