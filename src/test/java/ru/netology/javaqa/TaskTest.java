@@ -83,8 +83,8 @@ class TaskTest {
 
     public void testTaskNotMatches() {
         String[] subtasks = {"Молоко", "Яйца", "Батон"};
-        Task task = new Task (123);
-        boolean actual = task.matches( "Сыр");
+        Task task = new Task(123);
+        boolean actual = task.matches("Сыр");
         Assertions.assertFalse(actual);
     }
 
@@ -92,7 +92,7 @@ class TaskTest {
 
     public void testTaskMatches() {
         String[] subtasks = {};
-        Task task = new Task (123);
+        Task task = new Task(123);
         boolean actual = task.matches("Зайти в магазин");
         Assertions.assertFalse(actual);
     }
